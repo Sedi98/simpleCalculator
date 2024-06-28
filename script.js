@@ -7,10 +7,24 @@ let equalSpan = document.querySelector(".equalSpan");
 let btnEqual = document.querySelector(".btnEqual");
 let removeBtn = document.querySelector(".removeBtn");
 
+let footerSpan = document.querySelector(".footerSpan");
+
 let firstValue = 0;
 let secondValue = 0;
 let result = 0;
 let operator = "";
+
+
+checkYear();
+
+function checkYear() {
+  let year = new Date().getFullYear();
+  if (year == 2024) {
+    footerSpan.innerHTML = "";
+  } else {
+    footerSpan.innerHTML = `-${year}`;
+  }
+}
 
 function collector(number) {
   if (operator == "") {
@@ -89,5 +103,3 @@ btnEqual.addEventListener("click", () => {
 removeBtn.addEventListener("click", () => {
   fullReset();
 });
-
-

@@ -17,6 +17,7 @@
   background-size: 400% 400%;
   animation: gradient-animation 10s infinite alternate;
   box-sizing: border-box;
+  position: relative;
 }
 
 @keyframes gradient-animation {
@@ -134,6 +135,18 @@ input[type="text"] {
 
 .result {
   font-size: 48px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.footer_text{
+  color: #b5b5b5;
 }
 
 @media screen and (max-width: 1024px) {
