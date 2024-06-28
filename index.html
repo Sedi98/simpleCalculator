@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Calculator</title>
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="calculationContainer">
+        <div class="calculation">
+          <span id="firstInput"> </span> <span class="operatorSpan"></span>
+          <span id="lastInput"></span>
+        </div>
+        <div class="result">
+          <span class="equalSpan"></span> <span class="output"></span>
+        </div>
+      </div>
+      <div class="buttonsContainer">
+        <div class="row">
+          <div onclick="collector(7)" class="button">7</div>
+          <div onclick="collector(8)" class="button">8</div>
+          <div onclick="collector(9)" class="button">9</div>
+          <div onclick="setOperator('/')" class="button operator divide">
+            &divide;
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="collector(4)" class="button">4</div>
+          <div onclick="collector(5)" class="button">5</div>
+          <div onclick="collector(6)" class="button">6</div>
+          <div onclick="setOperator('x')" class="button operator multiple">
+            X
+          </div>
+        </div>
+
+        <div class="row">
+          <div onclick="collector(1)" class="button">1</div>
+          <div onclick="collector(2)" class="button">2</div>
+          <div onclick="collector(3)" class="button">3</div>
+          <div onclick="setOperator('-')" class="button operator minus">-</div>
+        </div>
+
+        <div class="row">
+          <div class="button removeBtn"><i class="bx bx-trash"></i></div>
+          <div class="button">0</div>
+          <div onclick="Calculate()" class="button btnEqual">=</div>
+          <div onclick="setOperator('+')" class="button operator plus">+</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
